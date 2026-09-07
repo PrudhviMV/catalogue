@@ -33,7 +33,9 @@ pipeline{
         stage('Test Dependencies'){
             steps{
                 script{
+                    sh """
                     npm test
+                    """
                 }
             }
         }
@@ -41,7 +43,9 @@ pipeline{
         stage('Install Dependencies'){
             steps{
                 script{
+                    sh """
                     npm install
+                    """
                 }
             }
         }
