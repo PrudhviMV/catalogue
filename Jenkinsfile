@@ -30,21 +30,21 @@ pipeline{
         }
     
     // This is test section
-        stage('Test Dependencies'){
-            steps{
-                script{
-                    sh """
-                    npm test
-                    """
-                }
-            }
-        }
-
         stage('Install Dependencies'){
             steps{
                 script{
                     sh """
                     npm install
+                    """
+                }
+            }
+        }
+
+        stage('Test Dependencies'){
+            steps{
+                script{
+                    sh """
+                    npm test
                     """
                 }
             }
