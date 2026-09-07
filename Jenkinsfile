@@ -41,7 +41,7 @@ pipeline{
         stage('Build docker image'){
             steps{
                 scripts{
-                    docker build -t catalogue:${appVersion} .
+                    docker build -t catalogue:'$appVersion' .
                     docker images
                 }
             }
