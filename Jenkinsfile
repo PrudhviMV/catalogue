@@ -23,13 +23,21 @@ pipeline{
             steps{
                 script{
                     def packageJson = readJSON file: 'package.json'
-                    appVersion = packageJson.version
+                    appVersion = packageJSON.version
                     echo 'appversion is ${appVersion}'
                 }
             }
         }
     
     // This is test section
+        stage('Test Dependencies'){
+            steps{
+                script{
+                    npm test
+                }
+            }
+        }
+
         stage('Install Dependencies'){
             steps{
                 script{
