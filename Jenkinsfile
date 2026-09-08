@@ -10,7 +10,7 @@ pipeline{
         Learn = "Jenkins"
         appVersion = ""
         Account_ID = "764038423244"
-        Project = "roboshop"
+        project = "roboshop"
         Component = "catalogue"
     }
 
@@ -59,8 +59,8 @@ pipeline{
                     withAWS(region:'us-east-1',credentials:'aws-creds') {
                     sh """
                     aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin ${Account_ID}.dkr.ecr.us-east-1.amazonaws.com
-                    docker build -t ${Account_ID}.dkr.ecr.us-east-1.amazonaws.com/${Project}/${Component}:${appVersion} .
-                    docker push ${Account_ID}.dkr.ecr.us-east-1.amazonaws.com/${Project}/${Component}:${appVersion}
+                    docker build -t ${Account_ID}.dkr.ecr.us-east-1.amazonaws.com/${project}/${Component}:${appVersion} .
+                    docker push ${Account_ID}.dkr.ecr.us-east-1.amazonaws.com/${project}/${Component}:${appVersion}
                     """
                     }
                 }
