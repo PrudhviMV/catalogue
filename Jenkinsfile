@@ -67,7 +67,18 @@ pipeline{
             }
         }
 
-
+    // This is Deploy section
+        stage('Deploy'){          
+            steps{
+                script{
+                    sh """
+                    echo 'Deploying'
+                    echo '$Learn'
+                    """
+                }
+            }
+        }
+    }
 
     post{
         always{
