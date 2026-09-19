@@ -6,7 +6,8 @@ on:
 
 jobs:
   feature-caller:
-    uses: PrudhviMV/workflows/.github/workflows/feature-nodejs-pipeline.yaml@main
+    # uses: PrudhviMV/workflows/.github/workflows/feature-nodejs-pipeline.yaml@main
+    uses: prudhvi-actions-test/workflows/.github/workflows/feature-nodejs-pipeline.yaml@main
     with:
       project: roboshop
       component: catalogue
