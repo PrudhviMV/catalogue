@@ -4,7 +4,7 @@ on: [push]
 
 jobs:
   feature-caller:
-    uses: PrudhviMV/workflows/.github/workflows/feature-nodejs-pipeline.yaml@main
+    uses: PrudhviMV/workflows/blob/main/.github/worfkflows/feature-nodejs-pipeline.yaml
     #uses: prudhvi-actions-test/workflows/.github/workflows/feature-nodejs-pipeline.yaml@main
     with:
       project: roboshop
